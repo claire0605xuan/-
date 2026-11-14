@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --blue: #3568a8;
+  --blue-dark: #244c80;
+  --pale: #edf4fc;
+  --text: #243247;
+  --muted: #718096;
+  --line: #e4ebf3;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f8fafd;
+  color: var(--text);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  line-height: 1.8;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(100% - 40px, 1000px);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo { color: var(--blue-dark); font-weight: 800; font-size: 20px; }
+.nav-label { color: var(--muted); font-size: 13px; }
+
+.hero {
+  margin-top: 42px;
+  padding: 56px;
+  border-radius: 22px;
+  background: linear-gradient(120deg, #eaf2fc, #f5f8fe);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.35;
+  letter-spacing: 1px;
+}
+
+.hero-text { max-width: 540px; color: #617188; margin: 18px 0 0; }
+
+.section { padding: 52px 0 34px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 20px; }
+.section-heading h2 { margin: 0; font-size: 26px; }
+.count { color: var(--muted); font-size: 13px; }
+
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.note-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 245px;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.note-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px #294b7012; }
+.card-icon { font-size: 28px; margin-bottom: 12px; }
+.card-tag { color: #7890ae; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; }
+.note-card h3 { margin: 5px 0; font-size: 20px; }
+.note-card p { margin: 4px 0 18px; color: var(--muted); font-size: 14px; }
+.card-link { margin-top: auto; color: var(--blue); font-size: 13px; font-weight: 700; }
+
+.tip {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 20px 24px;
+  margin: 8px 0 50px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.tip-icon { color: var(--blue); font-size: 25px; }
+.tip h3 { margin: 0; font-size: 15px; }
+.tip p { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+
+.page-main { padding: 38px 0 60px; }
+.back-link { display: inline-block; color: var(--blue); font-size: 14px; margin-bottom: 22px; }
+.article {
+  padding: clamp(24px, 5vw, 48px);
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.article h1 { margin: 4px 0 10px; font-size: clamp(28px, 4vw, 38px); line-height: 1.4; }
+.article-intro { color: var(--muted); margin: 0 0 30px; }
+.article h2 { margin: 30px 0 10px; font-size: 21px; }
+.article p, .article li { color: #536276; }
+.article ul { padding-left: 22px; }
+.example {
+  margin-top: 22px;
+  padding: 18px 20px;
+  background: var(--pale);
+  border-radius: 12px;
+}
+.example strong { color: var(--blue-dark); }
+
+.footer { padding: 22px 20px; text-align: center; color: #8a98aa; font-size: 12px; border-top: 1px solid var(--line); }
+
+@media (max-width: 700px) {
+  .hero { margin-top: 24px; padding: 34px 25px; }
+  .card-grid { grid-template-columns: 1fr; }
+  .note-card { min-height: 205px; }
+  .section { padding-top: 38px; }
+  .section-heading { align-items: start; }
+}
